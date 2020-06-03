@@ -13,7 +13,7 @@ dispatcher = updater.dispatcher
 import logging
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
-
+logging.getLogger().addHandler(logging.StreamHandler())
 
 def time(update, context):
     logging.info("received time request")
