@@ -1,4 +1,5 @@
 import os
+import sys
 from datetime import datetime
 
 import telegram
@@ -13,7 +14,7 @@ dispatcher = updater.dispatcher
 import logging
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
-logging.getLogger().addHandler(logging.StreamHandler())
+logging.getLogger().addHandler(logging.StreamHandler(sys.stdout))
 
 def time(update, context):
     logging.info("received time request")
